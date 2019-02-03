@@ -33,4 +33,4 @@ def calibrate(calibration_images, chessboard_dimensions=(9, 6), to_grayscale_fla
         None
     )
     
-    return images, object_points, corners, lambda img: cv2.undistort(img, mtx, dist, None, mtx)
+    return images, object_points, corners, lambda img: cv2.undistort(img, mtx, dist, None, mtx), mtx, dist
