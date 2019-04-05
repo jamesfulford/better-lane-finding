@@ -19,6 +19,11 @@ def or_binary(a, b):
     binary_output[(a == 1) | (b == 1)] = 1
     return binary_output
 
+def not_binary(a):
+    binary_output = np.zeros_like(a)
+    binary_output[(a == 0)] = 1
+    return binary_output
+
 
 def region_of_interest(binary, vertices):
     # defining a blank mask to start with
